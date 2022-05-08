@@ -6,6 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1" />
 <title>j일랜시아 공식 블로그</title>
 <link rel="icon" href="favicon.ico">
+<link media="all" rel="stylesheet" href="css/style.css" />
 <meta name="robots" content="index,follow" />
 <meta name="title" content="j일랜시아 공식 블로그" />
 <meta name="subject" content="j일랜시아 공식 블로그" />
@@ -26,151 +27,6 @@
 <script src="scripts/md5.js"></script>
 </head>
 <body>
-<style>
-    @import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
-
-    p {
-        margin: 0;
-    }
-    body {
-        margin: 0;
-        font-family: 'Noto Sans KR', sans-serif;
-        font-size: 16px;
-    }
-    .menuContainer .relative {
-        height: 50px;
-    }
-    .menuContainer .origin {
-        top: 0;
-        left: 0;
-        right: 0;
-
-        position: fixed;
-        height: 50px;
-        line-height: 50px;
-        background: #fff;
-        box-shadow: 0 1px 3px 0 rgba(226, 232, 240, .8), 0 1px 2px 0 rgba(226, 232, 240, .4);
-    }
-    .menuContainer .origin a {
-        display: inline-block;
-        color: #323232;
-        text-decoration: none;
-    }
-
-    .menuContainer .origin .logo {
-        padding-left: 20px;
-        font-size: 21px;
-        letter-spacing: -1px;
-        font-weight: 500;
-    }
-    .menuContainer .origin .originWrap {
-        position: relative;
-    }
-    .menuContainer .origin .originWrap .right {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-    .menuContainer .origin .originWrap .right .menu {
-        margin-right: 20px;
-        font-size: 16px;
-    }
-
-    .IntroContaniner {
-        background: #e3e3e3;
-        text-align: center;
-        padding: 20px;
-    }
-    .IntroContaniner > .head {
-        padding: 10px;
-    }
-    .IntroContaniner > .head img {
-        vertical-align: middle;
-    }
-    .IntroContaniner > .head h1 {
-        margin: 0;
-        vertical-align: middle;
-        display: inline-block
-    }
-
-    .DownloadContainer {
-        width: 800px;
-        margin: 0 auto;
-        margin-top: 30px;
-        box-shadow: 0 3px 10px 0 rgb(66 66 66 / 5%);
-        border: 1px solid #e4e5e8;
-        border-radius: 4px;
-    }
-    .DownloadContainer > .head {
-        border-bottom: 1px solid #e4e5e8;
-        padding: 20px;
-    }
-    .DownloadContainer > .head img {
-        width: 32px;
-        height: 32px;
-        vertical-align: middle;
-    }
-    .DownloadContainer > .head span {
-        vertical-align: middle;
-        font-size: 21px;
-        padding-left: 10px;
-    }
-    .DownloadContainer > .content {
-        position: relative;
-        padding: 20px;
-        border-bottom: 1px solid #e4e5e8;
-    }
-    .DownloadContainer > .content .title {
-        margin-bottom: 10px;
-    }
-    .DownloadContainer > .description {
-        padding: 20px;
-    }
-
-    .FileCheckContainer {
-        width: 800px;
-        margin: 0 auto;
-        margin-top: 30px;
-        box-shadow: 0 3px 10px 0 rgb(66 66 66 / 5%);
-        border: 1px solid #e4e5e8;
-        border-radius: 4px;
-    }
-    .FileCheckContainer > .head {
-        border-bottom: 1px solid #e4e5e8;
-        padding: 20px;
-    }
-    .FileCheckContainer > .head img {
-        width: 32px;
-        height: 32px;
-        vertical-align: middle;
-    }
-    .FileCheckContainer > .head span {
-        vertical-align: middle;
-        font-size: 21px;
-        padding-left: 10px;
-    }
-    .FileCheckContainer > .content {
-        padding: 20px;
-        border-bottom: 1px solid #e4e5e8;
-    }
-    .FileCheckContainer > .description {
-        padding: 20px;
-    }
-    .sub {
-        background: #686868;
-        color: #fff;
-        font-size: 14px;
-    }
-    .FileCheckContainer div img {
-        width: 100%;
-    }
-    .result {
-        font-size: 14px;
-    }
-</style>
-<script>
-    method = sha256;
-</script>
 <script src="scripts/main.js"></script>
 <div class="mainContainer">
     <div class="menuContainer">
@@ -179,16 +35,15 @@
             <div class="originWrap">
                 <a class="logo" href="/">jElancia (j일랜시아 공식 블로그)</a>
                 <div class="right">
-                    <a class="menu">j일랜시아란?</a>
-                    <a class="menu">다운로드</a>
+                    <a class="menu" href="#1-j일랜시아란?">j일랜시아란?</a>
+                    <a class="menu" href="#2-j일랜시아 다운로드">다운로드</a>
                     <a class="menu">인스톨러 다운로드</a>
-                    <a class="menu">파일검사기</a>
-                    <a class="menu">댓글</a>
+                    <a class="menu" href="#4-j일랜 파일해시 검사기">파일해시 검사기</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="IntroContaniner">
+    <div class="IntroContaniner" id="1-j일랜시아란?">
         <div class="head">
             <img src="imgs/hello.png" alt="j일랜시아란?">
             <h1>j일랜시아란?</h1>
@@ -209,7 +64,7 @@
             <span>이러한 이유로 마지막으로 배포된 <strong>j일랜시아</strong>의 공식적인 다운로드 공간을 만들자하고자 해당 블로그가 탄생하게 되었습니다!!</span>
         </p>
     </div>
-    <div class="DownloadContainer">
+    <div class="DownloadContainer" id="2-j일랜시아 다운로드">
         <div class="head">
             <img src="imgs/download.png" alt="j일랜시아 다운로드">
             <span>j일랜시아 다운로드</span>
@@ -242,7 +97,7 @@
             </p>
         </div>
     </div>
-    <div class="FileCheckContainer">
+    <div class="FileCheckContainer" id="4-j일랜 파일해시 검사기">
         <div class="head">
             <img src="imgs/hash-icon.png" alt="j일랜 파일해시 검사기">
             <span>파일해시 검사기</span>
@@ -301,6 +156,10 @@
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    <div class="fotter">
+        <span>jElancia Blog @2022</span>
+    </div>
 </div>
 </body>
 </html>
