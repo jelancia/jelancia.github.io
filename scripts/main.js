@@ -37,8 +37,6 @@ var execute = function(file) {
             var rsha1 = hashMaps[tsha1];
             var rmd5 = hashMaps[tmd5];
 
-            console.log(rmd5);
-
             var ret = ((rsha256 != undefined) && (rsha256 == rsha1) && (rsha256 == rmd5));
             var hashHtml = '<p style="font-size:12px;"><br>md5: ' + tmd5 +'<br>sha1: ' + tsha1 +'<br>sha256: ' + tsha256 +'</p>';
 
@@ -49,7 +47,7 @@ var execute = function(file) {
                 printResult('<span style="color:#ff0000;">업로드하신 ' + file.name +'은 최신버전 파일이 아닙니다. 바이러스 의심됨.</span>' + hashHtml);
             }
         } catch (e) {
-            console.log(e);
+            printResult('<span style="color:#ff0000;">'+ e.toString() +'</span>');
         }
     };
 
@@ -63,7 +61,7 @@ $(document).ready(function() {
         var file = input[0].files[0];
 
         if (filesAllow.indexOf(file.name) == -1) {
-            printResult('jelancia_core.dll, Elancia.exe, jElancia.exe 이외 파일은 검사 할 수 없습니다.');
+            printResult('<span style="color:#ff0000;">jelancia_core.dll, Elancia.exe, jElancia.exe 이외 파일은 검사 할 수 없습니다.</span>');
             return false;
         }
 
