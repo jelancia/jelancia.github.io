@@ -104,6 +104,40 @@ body {
     padding: 20px;
 }
 
+.InstallerContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+    box-shadow: 0 3px 10px 0 rgb(66 66 66 / 5%);
+    border: 1px solid #e4e5e8;
+    border-radius: 4px;
+}
+.InstallerContainer > .head {
+    border-bottom: 1px solid #e4e5e8;
+    padding: 20px;
+}
+.InstallerContainer > .head img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+}
+.InstallerContainer > .head span {
+    vertical-align: middle;
+    font-size: 21px;
+    padding-left: 10px;
+}
+.InstallerContainer > .content {
+    position: relative;
+    padding: 20px;
+    border-bottom: 1px solid #e4e5e8;
+}
+.InstallerContainer > .content .title {
+    margin-bottom: 10px;
+}
+.InstallerContainer > .description {
+    padding: 20px;
+}
+
 .FileCheckContainer {
     max-width: 800px;
     margin: 0 auto;
